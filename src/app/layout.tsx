@@ -11,6 +11,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+/* 
+metode pemanggilan komponen dengan absolute import memanfaatkan @ sebagai alias dari folder src agar tidak perlu lagi menggunakan relative path yang kadang membingungkan dan membuat kode menjadi panjang 
+*/
+import Header from "@/components/Header"
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -40,9 +45,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main>
-          {children}
-        </main>
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );
