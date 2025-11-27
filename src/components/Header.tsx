@@ -21,6 +21,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
   return (
@@ -37,6 +38,9 @@ const Header = () => {
           <Link href="/about">About</Link>
           <Link href="/posts">Posts</Link>
         </div>
+        
+        <ThemeSwitcher />
+        
       </nav>
     </header>
   );
