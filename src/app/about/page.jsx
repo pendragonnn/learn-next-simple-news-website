@@ -2,9 +2,14 @@
   menambahkan route about pada nextjs caranya cukup mudah yaitu dengan membuat folder baru di dalam folder app dengan nama sesuai dengan yang diinginkan (misalnya about) kemudian di dalam folder about tersebut dibuat file page.jsx atau page.tsx yang akan menjadi halaman utama dari route about tersebut.
 */
 
+import Image from "next/image";
+
 function page() {
   return (
     <>
+    <div className="relative w-full h-50 my-5">
+      <Image src="https://i.pinimg.com/1200x/0d/ec/90/0dec90825070c458c452bbe44d147d5e.jpg" alt="about image" fill />
+    </div>
       <h1>About Us</h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam

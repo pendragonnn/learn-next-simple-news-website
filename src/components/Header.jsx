@@ -7,14 +7,30 @@
   - mengambil data halaman terlebih dahulu, bahkan sebelum user klik
   - langsung bekerja dengan sistem routing Next.js 
 */
+
+/*
+  komponen Image adalah komponen bawaan Next.js yang menggantikan <img> biasa, tujuannya untuk:
+  - optimasi otomatis
+  - loading lebih cepat
+  - responsiveness yang lebih pintar
+  - SEO yang lebih bagus
+  - menghemat bandwith
+  
+  komponen ini dibuat karena <img> biasa itu boros dan tidak otomatis optimal
+*/
+
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <header className="header">
       <nav>
         <div className="logo">
-          <Link href="/">Kasih Info</Link>
+          <Link href="/" className="flex gap-4">
+            <Image src="vercel.svg" width={30} height={30} alt="logo" />
+            Kasih Info
+          </Link>
         </div>
         <div className="nav-links">
           <Link href="/">Home</Link>
