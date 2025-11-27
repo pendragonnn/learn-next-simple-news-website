@@ -32,3 +32,14 @@ export async function getDetailPost(id: number): Promise<Post> {
   const post = await response.json();
   return post
 }
+
+export async function getAllPost(): Promise<Post[]> {
+  // fungsi fetch mengambil data dari API eksternal, await berarti menunggu sampai fetch selesai
+  const response = await fetch(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+
+  // konversi Response ke JSON juga bersifat asynchronous jadi membutuhkan await
+  const posts = await response.json();
+  return posts
+}
