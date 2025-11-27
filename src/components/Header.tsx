@@ -28,8 +28,8 @@ const Header = () => {
       <nav>
         <div className="logo">
           <Link href="/" className="flex gap-4">
-            <Image src="vercel.svg" width={30} height={30} alt="logo" />
-            Kasih Info
+            <Image src="/vercel.svg" width={30} height={30} alt="logo" />
+            Kasih Info!
           </Link>
         </div>
         <div className="nav-links">

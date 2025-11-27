@@ -21,3 +21,14 @@ export async function getLastPost(): Promise<Post[]> {
   const posts = await response.json();
   return posts
 }
+
+export async function getDetailPost(id: number): Promise<Post> {
+  // fungsi fetch mengambil data dari API eksternal, await berarti menunggu sampai fetch selesai
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${id}`
+  );
+
+  // konversi Response ke JSON juga bersifat asynchronous jadi membutuhkan await
+  const post = await response.json();
+  return post
+}
